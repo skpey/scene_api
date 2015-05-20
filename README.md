@@ -64,7 +64,7 @@ POST参数
 
 在页面中头部加上：
 
-> <html lang="en" ng-app="app" ng-controller="AppCtrl">
+>  `<html lang="en" ng-app="app" ng-controller="AppCtrl">``
 
 在BODY中间加入:
 >     <!--编辑器代码开始-->
