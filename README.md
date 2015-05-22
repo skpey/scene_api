@@ -1,4 +1,4 @@
-# 域名需要经过授权后才能操作以下接口 #
+ # 域名需要经过授权后才能操作以下接口 #
 
 ## 获取优通UID 与工作人员联系 ##
 
@@ -99,3 +99,8 @@ POST参数
 > http://您的域名/您的页面文件名?场景别名
 
 支持打包成本地APP安装版,目前只测试安卓版生成.
+
+
+[下载演示](http://server.ucomm.cn/scene_demo.rar)
+
+[在线演示](http://server.ucomm.cn/scene_demo/admin.html)
