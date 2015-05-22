@@ -67,18 +67,20 @@ POST参数
 >  `<html lang="en" ng-app="app" ng-controller="AppCtrl">``
 
 在BODY中间加入:
->     <!--编辑器代码开始-->
->     <script>
->     var server_uid="优通UID";  //优通帐号
->     var server_key="优通KEY"; //API KEY
->     var server_token="通信TOKEN";   
->     </script>
->     <script src="http://server.ucomm.cn/uem/scene.min.js"></script>
->     <div id="ume_load">拼命加载中...</div>
->     <div id="cache"></div>
->     <div style="z-index:2000;" id="notify" ng-include="'umetip.tpl.html'" ng-if="umetip.UCurrent().length"></div>
->     <div id="view_ume" ng-view></div>
->     <!--/编辑器代码结束-->
+
+
+    <!--程序骨架-->
+    <script>
+    var release_url="admin.html";   //场景发布成功后跳转网址
+    var api_uid="APIUID";  //优通帐号
+    var api_key="APIKEY"; //APIKEY
+    var api_token="TOKEN";
+    </script>
+    <script src="http://server.ucomm.cn/uem/scene.min.js"></script>
+    <div id="ume_load"><div class="divam"></div>拼命加载中...</div>
+    <div id="cache"></div>
+    <div id="uce_box" ng-view></div>
+    <!--/程序骨架-->
 
 访问页面路径
 
