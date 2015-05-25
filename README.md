@@ -1,4 +1,4 @@
- # 域名需要经过授权后才能操作以下接口 #
+# 域名需要经过授权后才能操作以下接口 #
 
 ## 获取优通UID 与工作人员联系 ##
 
@@ -75,6 +75,13 @@ POST参数
     var api_uid="APIUID";  //优通帐号
     var api_key="APIKEY"; //APIKEY
     var api_token="TOKEN";
+    //商户载入自定义接口  不需要就为空
+    /* 
+    var uapi_id='huiyi_page'; //接口插件名称唯一
+    var uapi_data=[{name: "报名表单",value:"1",diy: 3..自定义},{name: "留言表单",value:"2",diy: 3..自定义},{name: "订购表单",value:"2",diy: 3...自定义}];  //下拉数据源
+    var uapi_name='表单';
+    var uapi_description='可以设置成当前用户可用的表单';
+     */
     </script>
     <script src="http://server.ucomm.cn/uem/scene.min.js"></script>
     <div id="ume_load"><div class="divam"></div>拼命加载中...</div>
