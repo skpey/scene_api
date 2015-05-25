@@ -9,7 +9,15 @@
 每个页面对应一个TOKEN，TOKEN是固定的可以保存到本地。请不要频繁获取TOKEN
 
 当前页面GET请求目标  
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/token.json`
+> `http://server.ucomm.cn/tool/优通UID/优通KEY/token.json`
+
+GET参数
+* sceneid：场景ID（如使用以下字段必选此参数）
+* scenemint：商户自定义数字字段（可选）
+* scenemtext：商户自定义文本字段（可选）
+ 
+例子 http://server.ucomm.cn/tool/优通UID/优通KEY/token.json?sceneid=场景ID&scenemint=用户ID  
+验证这个场景是否属于这个用户
 
 返回：
 
@@ -53,7 +61,7 @@ POST可选参数
 
 ## 去版权 ##
 
-当前页面POST请求目标
+当前页面POST请求目标  建议在后台处理
 > `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/copyright.json`
 
 POST参数
