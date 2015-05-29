@@ -83,6 +83,7 @@ POST参数
     var api_uid="APIUID";  //优通帐号
     var api_key="APIKEY"; //APIKEY
     var api_token="TOKEN";
+    var mint=""; //商户自定义数字ID
     //商户载入自定义接口  不需要就为空
     /* 
     var uapi_id='huiyi_page'; //接口插件名称唯一
