@@ -1,10 +1,34 @@
 # 域名需要经过授权后才能操作以下接口 #
 
-## 获取优通UID 与工作人员联系 ##
+## 获取优通uid 与工作人员联系 ##
 
-## 获取优通KEY 与工作人员联系 ##
+## 获取优通key 与工作人员联系 ##
 
-## **获取通信TOKEN** ##
+## 获取优通secret 与工作人员联系 ##
+
+## **TOKEN算法** ##
+
+base64(sha1(当前页面地址+UID+key+secret))  
+
+
+ 例子： 
+
+**url:**http://www.abcd.com/show.html?id=1
+
+**uid:**ynhuace
+
+**key:**fsdf44874s
+
+**secret:**fs888fs557fsief48
+
+ base64(sha1("http://www.abcd.com/show.html?id=1ynhuacefsdf44874sfs888fs557fsief48"))  
+
+ 结果：MzkxOTY3NjRiNWUzYTUxNGM0ZDk3ZDhjNjJiOGQ1ZmM0ODA1MTg5Nw
+ 
+ 
+
+
+## **获取通信TOKEN(临时 还是自己算出TOKEN吧)** ##
 
 每个页面对应一个TOKEN，TOKEN是固定的可以保存到本地。请不要频繁获取TOKEN
 
@@ -58,6 +82,24 @@ POST可选参数
 返回
 
     {"code":200,"message":"操作成功","list":[{"name":"新品推广","description":"欢迎使用本产品","picture":"http://7xizfo.com1.z0.glb.clouddn.com/no_img.png","creationtime":"2015/5/19 22:10:15","updatetime":"2015/5/19 22:10:15","file":"fsd","mint":3,"mtext":"","browse":0,"share":0,"tel":0,"copyright":"0"},{"name":"我的场景","description":"这是我的第一个测试","picture":"http://7xizfo.com1.z0.glb.clouddn.com/no_img.png","creationtime":"2015/5/19 21:46:10","updatetime":"2015/5/19 21:46:10","file":"adg","mint":null,"mtext":null,"browse":0,"share":0,"tel":0,"copyright":"0"}],"page":{"count":1,"pageNo":1,"pagesize":20}}
+
+
+## 获取表单列表 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/form.json`
+
+POST可选参数
+
+* keyword：名称关键字
+* page：当前页码
+* category：类别ID
+* mint:商户自定义数字字段
+* mtext:商户自定义文本字段
+
+返回
+
+    {"code":200,"message":"操作成功","list":[{"name":"新品推广","description":"欢迎使用本产品","picture":"http://7xizfo.com1.z0.glb.clouddn.com/no_img.png","creationtime":"2015/5/19 22:10:15","updatetime":"2015/5/19 22:10:15","file":"fsd","mint":3,"mtext":"","browse":0,"share":0,"tel":0,"copyright":"0"},{"name":"我的场景","description":"这是我的第一个测试","picture":"http://7xizfo.com1.z0.glb.clouddn.com/no_img.png","creationtime":"2015/5/19 21:46:10","updatetime":"2015/5/19 21:46:10","file":"adg","mint":null,"mtext":null,"browse":0,"share":0,"tel":0,"copyright":"0"}],"page":{"count":1,"pageNo":1,"pagesize":20}}
+
 
 ## 去版权 ##
 
