@@ -13,17 +13,17 @@ base64(sha1(当前页面地址+UID+key+secret))
 
  例子： 
 
-**url:**http://www.abcd.com/show.html?id=1
+**url:**`http://www.abcd.com/show.html?id=1`
 
-**uid:**ynhuace
+**uid:**`ynhuace`
 
-**key:**fsdf44874s
+**key:**`fsdf44874s`
 
-**secret:**fs888fs557fsief48
+**secret:**`fs888fs557fsief48`
 
- base64(sha1("http://www.abcd.com/show.html?id=1ynhuacefsdf44874sfs888fs557fsief48"))  
+ `base64(sha1("http://www.abcd.com/show.html?id=1ynhuacefsdf44874sfs888fs557fsief48"))  `
 
- 结果：MzkxOTY3NjRiNWUzYTUxNGM0ZDk3ZDhjNjJiOGQ1ZmM0ODA1MTg5Nw
+ 结果：`MzkxOTY3NjRiNWUzYTUxNGM0ZDk3ZDhjNjJiOGQ1ZmM0ODA1MTg5Nw`
  
  
 
