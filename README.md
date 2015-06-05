@@ -71,7 +71,7 @@ POST参数
 当前页面POST请求目标
 > `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/list.json`
 
-POST可选参数
+GET可选参数
 
 * keyword：名称关键字
 * page：当前页码
@@ -88,13 +88,10 @@ POST可选参数
 当前页面POST请求目标
 > `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/form.json`
 
-POST可选参数
+GET可选参数
 
-* keyword：名称关键字
 * page：当前页码
-* category：类别ID
-* mint:商户自定义数字字段
-* mtext:商户自定义文本字段
+* sceneid：场景ID
 
 返回
 
