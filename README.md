@@ -126,10 +126,17 @@ POST参数
     //商户载入自定义接口  不需要就为空
     /* 
     var uapi_id='huiyi_page'; //接口插件名称唯一
-    var uapi_data=[{name: "报名表单",value:"1",diy: 3..自定义},{name: "留言表单",value:"2",diy: 3..自定义},{name: "订购表单",value:"2",diy: 3...自定义}];  //下拉数据源
+    var uapi_data=[{name: "报名表单",value:"1","diy":"自定义"},{name: "留言表单",value:"2","diy":"自定义"}];  //下拉数据源
     var uapi_name='表单';
     var uapi_description='可以设置成当前用户可用的表单';
      */
+
+    //商户载入自定义模板 不需要就为空
+    var uapi_tplid='14305997870'; //模板ID 替换原有的模板分类 例： 表单模板 id=14305997870
+    var uapi_tpldata=[{"id":"1","name":"类别1","Parent":"14305997870"},{"id":"2","name":"类别2","Parent":"14305997870"}];//模板分类
+    var uapi_tpllist='http://server.ucomm.cn/uem/aj_page/list.js?a=json'; //你的模板列表数据源地址  改成你的数据源地址  URL后面会自动加上 id={id}&parent={parent}
+    var uapi_tplpage='http://server.ucomm.cn/uem/aj_page/page.js?a=json'; //你的模板页面数据源地址  改成你的数据源地址  URL后面会自动加上 id={id}&parent={parent} 
+ 
     </script>
     <script src="http://server.ucomm.cn/uem/scene.min.js"></script>
     <div id="ume_load"><div class="divam"></div>拼命加载中...</div>
