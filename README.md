@@ -83,100 +83,6 @@ GET可选参数
 
     {"code":200,"message":"操作成功","list":[{"name":"新品推广","description":"欢迎使用本产品","picture":"http://7xizfo.com1.z0.glb.clouddn.com/no_img.png","creationtime":"2015/5/19 22:10:15","updatetime":"2015/5/19 22:10:15","file":"fsd","mint":3,"mtext":"","browse":0,"share":0,"tel":0,"copyright":"0"},{"name":"我的场景","description":"这是我的第一个测试","picture":"http://7xizfo.com1.z0.glb.clouddn.com/no_img.png","creationtime":"2015/5/19 21:46:10","updatetime":"2015/5/19 21:46:10","file":"adg","mint":null,"mtext":null,"browse":0,"share":0,"tel":0,"copyright":"0"}],"page":{"count":1,"pageNo":1,"pagesize":20}}
 
-
-
-## 获取自定义模板分类 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpl.json`
-
-返回
-
-    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
-
-
-## 自定义模板分类添加 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tplcaddsave.json`
-
-POST参数
-
-* name：模板分类名称
-* orderid：模板分类排序
-
-返回
-
-    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
-
-## 自定义模板分类修改 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tplceditsave.json`
-
-POST参数
-
-* id：模板分类ID
-* name：模板分类名称
-* orderid：模板分类排序
-
-返回
-
-    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
-
-
-## 自定义模板分类删除 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tplcdel.json`
-
-GET参数
-
-* id：模板分类ID
-返回
-
-    {"code":200,"message":"操作成功"}
-
-
-
-## 获取自定义模板列表 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpllist.json`
-
-GET参数
-
-* id：模板分类ID
-
-返回
-
-    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
-
-
-
-## 删除自定义模板 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpldel.json`
-
-POST参数
-
-* id：模板ID
-
-返回
-
-    {"code":200,"message":"操作成功"}
-
-
-
-
-## 添加自定义模板 ##
-当前页面POST请求目标
-> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpladd.json`
-
-POST参数
-
-* classid：模板分类ID
-* name：模板名称
-* json：模板JSON数据
-
-返回
-
-    {"code":200,"message":"操作成功"}
  
 
 ## 获取表单列表 ##
@@ -273,3 +179,103 @@ POST参数
 [下载演示](http://server.ucomm.cn/scene_demo.rar)
 
 [在线演示](http://server.ucomm.cn/scene_demo/admin.html)
+
+
+
+# ====新增自定义模板接口(联系管理人员开通)==== #
+
+
+
+## 获取自定义模板分类 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpl.json`
+
+返回
+
+    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
+
+
+## 自定义模板分类添加 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tplcaddsave.json`
+
+POST参数
+
+* name：模板分类名称
+* orderid：模板分类排序
+
+返回
+
+    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
+
+## 自定义模板分类修改 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tplceditsave.json`
+
+POST参数
+
+* id：模板分类ID
+* name：模板分类名称
+* orderid：模板分类排序
+
+返回
+
+    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
+
+
+## 自定义模板分类删除 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tplcdel.json`
+
+GET参数
+
+* id：模板分类ID
+返回
+
+    {"code":200,"message":"操作成功"}
+
+
+
+## 获取自定义模板列表 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpllist.json`
+
+GET参数
+
+* id：模板分类ID
+
+返回
+
+    {"code":200,"message":"操作成功","list":[{"name":"分类1","id":1},{"name":"分类2","id":2}],"page":{"count":1,"pageNo":1,"pagesize":20}}
+
+
+
+## 删除自定义模板 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpldel.json`
+
+POST参数
+
+* id：模板ID
+
+返回
+
+    {"code":200,"message":"操作成功"}
+
+
+
+
+## 添加自定义模板 ##
+当前页面POST请求目标
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpladd.json`
+
+POST参数
+
+* classid：模板分类ID
+* name：模板名称
+* json：模板JSON数据
+
+返回
+
+    {"code":200,"message":"操作成功"}
+ 
