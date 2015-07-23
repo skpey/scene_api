@@ -92,7 +92,7 @@ GET可选参数
 GET可选参数
 
 * page：当前页码
-* sceneid：场景ID
+* scene：场景ID
 
 返回
 
