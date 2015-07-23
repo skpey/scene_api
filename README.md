@@ -269,10 +269,13 @@ POST参数
 当前页面POST请求目标
 > `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/tpladd.json`
 
-POST参数
+GET参数
 
 * classid：模板分类ID
-* name：模板名称
+
+
+POST参数
+
 * json：模板JSON数据
 
 返回
