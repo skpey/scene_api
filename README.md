@@ -283,3 +283,59 @@ POST数据
 
     {"code":200,"message":"操作成功"}
  
+
+## 上传缩略图 ##
+获取上传uptoken
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/uptoken.json`
+
+GET参数
+
+* f：上传文件名
+ 
+
+返回
+
+    {"error":"0","token":"UPTOKEN","key":"key文件名","uploadurl":"http://up.qiniu.com","uc_file_host":"文件服务器URL"}
+
+上传JS参考(本上传只支持HTML5浏览器)：
+
+    
+    HTML代码:
+    <span id="upload_tip"></span>
+    <input id="upfile" name="file"   type="file" /><input type="text" class="form-control" id="thumbnail" data-rule="required;">
+   
+    JS部分:
+    //上传简单演示
+    var uc_upload = function(f,token,key,uploadurl) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', uploadurl, true);
+    var formData;
+    formData = new FormData();
+    if (key !== null && key !== undefined) formData.append('key', key);
+    formData.append('token', token);
+    formData.append('file', f);
+    var taking;
+    xhr.onreadystatechange = function(response) {
+    			$("#upload_tip").hide();
+    if (xhr.readyState == 4 && xhr.status == 200 && xhr.responseText != "") {
+    var blkRet = JSON.parse(xhr.responseText);
+    $("#thumbnail").val(blkRet.key);
+    } else if (xhr.status != 200 && xhr.responseText) {
+    }
+    };
+    $("#upload_tip").html("正在上传中...");
+    xhr.send(formData);
+     };
+    		
+     $("#upfile").change(function() {
+    //普通上传
+    		 var filename=$("#upfile")[0].files[0].name,filesize=$("#upfile")[0].files[0].size;
+    		 if(filesize<400000) {
+    		$.getJSON(host_url+"uptoken.json?f="+filename,function(data){  //获取UPTOKEN
+    		  uc_upload($("#upfile")[0].files[0],data.token,data.key,data.uploadurl);
+    		});
+    		 }else {
+    		alert("文件太大("+filesize+")!")
+    		 }
+    	 
+      }); //简单上传完成
