@@ -272,11 +272,12 @@ POST参数
 GET参数
 
 * classid：模板分类ID
+* thumbnail：缩略图(请上传至我们指定的空间)
 
 
-POST参数
+POST数据
 
-* json：模板JSON数据
+* 模板JSON数据
 
 返回
 
