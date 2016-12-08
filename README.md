@@ -118,6 +118,34 @@ POST参数
 
 * file：场景别名
 
+## 场景删除 ##
+
+当前页面POST请求目标  建议在后台处理
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/del.json`
+
+
+POST参数
+
+* file：场景别名
+
+
+## 场景复制 ##
+
+当前页面POST请求目标  建议在后台处理
+> `http://server.ucomm.cn/scene/优通UID/优通KEY/通信TOKEN/copy.json`
+
+
+POST参数
+
+* file：场景别名
+
+
+
+
+
+
+
+
 ## 场景开关 ##
 
 当前页面POST请求目标  建议在后台处理
